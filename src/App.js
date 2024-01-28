@@ -1,16 +1,21 @@
+// App.js
 import React from "react";
-import "./App.css";
+import styled from "styled-components";
+import Timer from "./Timer";
+import Sound from "./Sound";
+
+const AppContainer = styled.div`
+  text-align: center;
+  padding: 20px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to Dota Timer App</h1>
-        <p>This is a simple React app for managing Dota game timers.</p>
-        <p>Start building your awesome Dota Timer features here!</p>
-        {/* Add your components or features here */}
-      </header>
-    </div>
+    <AppContainer>
+      <h1 className="text-4xl mb-4">Welcome to Dota Timer App</h1>
+      <Timer expiryTimestamp={1630000000000} />
+      <Sound />
+    </AppContainer>
   );
 }
 
